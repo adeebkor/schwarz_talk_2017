@@ -1,0 +1,2 @@
+git clone https://gitlab.centralesupelec.fr/gouarin/elasticity.git
+cd elasticity;python setup.py install

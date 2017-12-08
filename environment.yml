@@ -1,0 +1,11 @@
+channels:
+    - conda-forge
+dependencies:
+    - python=3
+    - six
+    - numpy
+    - sympy
+    - setuptools
+    - cython
+    - mpi4py
+    - petsc4py
