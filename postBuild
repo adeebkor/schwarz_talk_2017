@@ -1,2 +1,3 @@
 git clone https://gitlab.centralesupelec.fr/gouarin/elasticity.git
 cd elasticity;python setup.py install
+ipcluster start -n 4 --engines=MPIEngineSetLauncher
