@@ -1,4 +1,6 @@
 git clone https://gitlab.centralesupelec.fr/gouarin/elasticity.git
-cd elasticity;python setup.py install
+cd elasticity
+python setup.py install
+cd ..
 ipython profile create --parallel --profile=mpi
 cp ipcluster_config.py ~/.ipython/profile_mpi/
