@@ -1,5 +1,6 @@
 channels:
     - conda-forge
+    - damianavila82
 dependencies:
     - python=3
     - six
@@ -9,3 +10,8 @@ dependencies:
     - cython
     - mpi4py
     - petsc4py
+    - bqplot
+    - ipywidget
+    - ipyparallel
+    - rise
+    - vtk
