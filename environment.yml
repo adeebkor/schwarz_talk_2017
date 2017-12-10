@@ -15,5 +15,5 @@ dependencies:
     - ipywidgets
     - ipyparallel
     - rise
+    - mesalib
     - vtk
-    - pyopengl
