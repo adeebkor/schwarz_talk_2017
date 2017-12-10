@@ -16,3 +16,4 @@ dependencies:
     - ipyparallel
     - rise
     - vtk
+    - pyopengl
