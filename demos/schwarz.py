@@ -103,6 +103,9 @@ for i in range(len(vecs)):
 x = ptilde
 bcApplyWest_vec(da, x)
 
+viewer = PETSc.Viewer().createVTK('solution_2d_ptilde.vts', 'w', comm = PETSc.COMM_WORLD)
+x.view(viewer)
+
 ksp = PETSc.KSP().create()
 ksp.setOperators(A, P)
 ksp.setOptionsPrefix("elas_")

@@ -9,12 +9,12 @@ def main(overlap):
     size = mpi.COMM_WORLD.size
     rank = mpi.COMM_WORLD.rank
 
-    N = 100
+    N = 101
     L = 1.
     dx = 1./(N - 1)
     Nl = (N-1)//size + 1
     if mpi.COMM_WORLD.rank == size-1:
-        Nl += N%size
+        Nl += (N-1)%size
     
     Narray = mpi.COMM_WORLD.allgather(Nl-1)
     tmp = np.cumsum(Narray)
@@ -104,7 +104,7 @@ def plot_solution(view):
             line_para[i].y=sol[0][i]
 
     widgets.interact(update_ite, iteration=iteration);
-    overlap = widgets.IntSlider(value=1, min=1, max=20, step=1, continuous_update=False)
+    overlap = widgets.IntSlider(value=1, min=0, max=20, step=1, continuous_update=False)
     widgets.interact(change_overlap, overlap=overlap)
 
     fig_para = Figure(axes=[ax_x, ax_y], marks=line_para, animation_duration=100)
