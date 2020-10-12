@@ -128,7 +128,7 @@ c.IPClusterEngines.engine_launcher_class = 'MPI'
 
 ## The number of engines to start. The default is to use one for each CPU on your
 #  machine
-#c.IPClusterEngines.n = 4
+c.IPClusterEngines.n = 4
 
 #------------------------------------------------------------------------------
 # IPClusterStart(IPClusterEngines) configuration
